@@ -1,0 +1,73 @@
+'use strict';
+
+/*
+Data types:
+
+- number
+- string
+- boolean
+- null
+- undefined
+- object 
+- symbol
+- bigint
+*/
+
+// Numbers
+
+let integer = 1;
+let float = 1.23;
+
+//Special types: Infinity, -Infinity, NaN (not a number)
+
+//console.log (1 / 0, Infinity, -Infinity);
+
+//console.log (Rich / 3); - NaN (Not a number);
+
+
+//let age = "Rich" / 5;
+//let calculation = age * 4 + 2 - 1;
+// Math operations are safe! Worst case scenario = NaN
+
+
+//Strings
+
+let name = "Rich";
+let surname = "Mery";
+let fullname = `Fullname: ${name} ${surname}`;
+let mathResult = `Result is: ${2 + 3 + 4}`;
+
+// Booleans (Logical type)
+
+let underAge = false;
+let isWeekend = true;
+
+let isGreater = 16 > 8;
+
+//Null
+
+let users = null
+
+// Null is a reference to our non-existing object
+// It is a special value that represents nothing, empty or value unknown
+// Undefined = value not defined
+
+let x; // -> Undefined
+
+//Objects & symbols
+//Objects are used to present collections
+//Symbols are used to create unique indentifiers for objects
+
+/* typeof operator */
+
+let val = null;
+
+console.log(
+    typeof null, // BUG returns object
+    typeof number,
+    typeof string,
+    typeof boolean,
+    typeof undefined,
+    typeof console,
+    typeof console.log // returns function een though functions are object types
+    );
