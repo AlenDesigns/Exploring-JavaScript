@@ -1,0 +1,62 @@
+"use strict";
+//strict mode = Using modern JS
+
+/*
+Module 1 - Variables
+*/
+
+/*
+oldskool declaration
+var name = "Rich";
+
+console.log(name);
+
+*/
+
+let age = 41;
+const birthYear = 1978; 
+
+//birthYear = 2000; -> Cannot change a const
+
+//let var1 = 1, var2 = 2, var3 = 3; -> less readable code
+
+let greeting = "Hello Rich"; // String value
+let wage = 200; // Integer
+//let var3 = [0, 1, 2]; // Array
+
+//primitive values = one value
+
+//What is good code? = READABLE code
+
+/*
+
+Variable naming
+
+*/
+
+
+/*
+
+Allowed names:
+
+- Letters
+- Digits
+
+- camelCase
+- JS is a case sensitive language (let name, let Name are different!)
+
+Not allowed:
+- Starting with numbers (ex. let 123a)
+- kebab case (ex. first-name)
+- reserved names (0ex. import, let, for, const etc)
+*/
+
+let weight = "75kg";
+let Weight = "70kg";
+
+let $ = 9; // Supershort variable name - jQuery
+let _ = 1; // Lodash (utility library)
+
+isOk = true;
+
+console.log(isOk);
