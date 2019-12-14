@@ -1,141 +1,56 @@
 'use strict';
 
-/* 
-    Data types:
-        - number
-        - string
-        - boolean
-        - null
-        - undefined 
-        - object
-        - symbol
-        - bigint
+/*
+    Operators 
 */
 
-// Numbers
+/*
+    Terms
 
-let integer = 1;
-let float = 1.25;
-let infinity = -Infinity;
+    - operand -> value operator is applied to.
+        5 + 2 -> 5 and 2 are operands
+    - unary operator -> operator assigned to a single operand
+        -5 -> - is an unary operator and 5 is an operand
+    - binary operator -> operator assigned to 2 operands
+        3 - 1 -> - is a binary operator and 3, 1 are operands
 
-// Special types: Infinity, -Infinity, NaN
-
-// console.log (1 / 0, Infinity, -Infinity); -> Inifinity sample
-
-// console.log("Hi Rich!" / 3); -> NaN [not a number]
-
-// let age = "Rich" * 5;
-// let calculation = age * 4 + 2 - 1; -> operations with NaN return NaN!
-
-// Math operations are SAFE! Worst case scenarion: NaN
-
-// Strings
-
-let name = "Alen"; // -> Double quotations 
-let surname = 'Mehic'; // -> Single quotations
-let fullname = `Fullname: ${name} ${surname}`; // -> Backtics ${expression}
-let mathResult = `Result is: ${ 2 + 3 + 4 }`; 
-
-// Booleans (logical type)
-
-let isWeekend = true;
-let underAge = false;
-
-let isGreater = 16 > 8;
-
-// Null
-
-let users = null;
-
-// Null is a reference to a non-existing object. 
-
-// It is a special value that represents nothing, empty or value unknown
-
-// Undefined
-
-// Undefined = value not assigned
-
-let x; // -> undefined
-
-// Objects & symbols
-
-// Objects are used to present collections.
-
-// Symbols are used to create unique indentifiers for objects.
-
-/* typeoff operator */
-
-let val = null;
-let number = 2;
-let string = "string"
-let boolean = true;
-
-console.log(
-    'Typeof operator: ',
-    typeof null, // BUG! returns object
-    typeof(number),
-    typeof string, 
-    typeof boolean, 
-    typeof undefined, 
-    typeof console, 
-    typeof console.log // returns function even though functions are object types.
-);
-
-/* 
-    Type Conversion 
 */
 
-// String conversion
+// Binary + 
 
-let isSunday = false; // -> 'false'
+let name = 'Alen' + ' ' + 'Mehic'; // -> 'Alen Mehic'
+let myString = 1 + '2'; // -> if + detects a string, it converts all operands to string
+myString = 1 + 1 + '2'; // -> operations are evaluated from left to right -> 22
 
-console.log(
-    'String conversion: ', 
-    String(isSunday), 
-    String(null), 
-    String(undefined), 
-    String(1.25) );
+// All other operators, except binary +, convert strings to numbers
+let age = '21' - 1; // converts string to a number
+let days = 12 * '30'; 
+let randomCalculation = 12 / '2' + 1; 
 
-// Number conversion
+// console.log(randomCalculation); -> 7
 
-let currentDay = "14th";
-let badFormat = "   30   ";
-let shoeSize = 9;
-let hasLicense = false;
+// Unary +
 
-console.log( 
-    'Number conversion: ',
-    Number(currentDay), 
-    Number(badFormat), //-> "30" -> 30
-    Number(shoeSize), 
-    Number(hasLicense), 
-    Number(null), 
-    Number(undefined) );
+let isUnderage = true;
 
-// Boolean conversion
+// console.log( +isUnderage ); -> 1
 
-/* 
-    Intuitively "empty" values are converted to false:
-    - 0
-    - ""
-    - null
-    - undefined
-    - NaN
+let x = '30';
+let y = '20';
 
-    All other types become true
-*/
+//console.log( +x + +y );
 
-console.log(
-    'Boolean conversion: ', 
-    Boolean(0),
-    Boolean(''),
-    Boolean(null),
-    Boolean(undefined),
-    Boolean(NaN),
-    Boolean(22),
-    Boolean(Infinity),
-    Boolean('Hey Alen!'),
-    Boolean('true'),
-    Boolean('0'), // -> in some languages string with value of 0 = false (PHP), but in JS = true
-    Boolean('1.24')
-)
+// Remainder operator
+
+console.log(5 % 2);
+console.log(6 % 3);
+
+// Exponentiation operator
+
+console.log( 2 ** 2 );
+console.log( 3 ** 2 );
+console.log( 4 ** 3 );
+console.log( 8 ** (1/3) ); 
+
+// Operators execution order is determined by PRECEDENCE TABLE!
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
