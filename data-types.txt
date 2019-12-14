@@ -1,8 +1,10 @@
 'use strict';
 
 /*
-Data types:
+Module 2 - Data types:
 
+
+// Primitive except object
 - number
 - string
 - boolean
@@ -24,6 +26,7 @@ let float = 1.23;
 
 //console.log (Rich / 3); - NaN (Not a number);
 
+// Primitve = data that is not an object - holds single
 
 //let age = "Rich" / 5;
 //let calculation = age * 4 + 2 - 1;
@@ -62,6 +65,7 @@ let x; // -> Undefined
 
 let val = null;
 
+/*
 console.log(
     typeof null, // BUG returns object
     typeof number,
@@ -69,5 +73,68 @@ console.log(
     typeof boolean,
     typeof undefined,
     typeof console,
-    typeof console.log // returns function een though functions are object types
+    typeof console.log // returns function seen though functions are object types
     );
+    */
+
+// -----------  Sub Module 2 - Type Conversions ----------------
+
+//String Conversion
+
+/*let isSunday = false;
+
+console.log( 
+    'String Conversion:',
+    String(isSunday), 
+    String(null), 
+    String(undefined), 
+    String(1.25) 
+    );
+*/
+
+// Number Conversion
+
+// False = 0 - True = 1
+
+let currentDay = "14th";
+let shoeSize = 9;
+let hasLicence = false;
+let badFormat = "  30  ";
+
+console.log(
+    'Number Conversion:',
+    Number(currentDay), 
+    Number(shoeSize),
+    Number(hasLicence),
+    Number(badFormat),
+    Number(null),
+    Number(undefined),
+)
+
+
+// Boolean Conversion
+/* Intuitively "empty" values are converted to false
+- 0
+- ""
+- null
+- undefined
+- NaN
+
+All other types become true
+
+*/
+
+console.log(
+'Boolean conversion:',
+Boolean(0),
+Boolean(''),
+Boolean(null),
+Boolean(undefined),
+Boolean(NaN),
+Boolean(22),
+Boolean(Infinity),
+Boolean("Hey Rich"),
+Boolean('true'),
+Boolean('0'), // --> in some langs string with value is false (php)
+Boolean('1.24'),
+) 
