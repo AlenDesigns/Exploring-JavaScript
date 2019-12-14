@@ -136,6 +136,6 @@ console.log(
     Boolean(Infinity),
     Boolean('Hey Alen!'),
     Boolean('true'),
-    Boolean('0'),
+    Boolean('0'), // -> in some languages string with value of 0 = false (PHP), but in JS = true
     Boolean('1.24')
 )
