@@ -1,59 +1,141 @@
 'use strict';
-// strict mode has to be declared on top ALWAYS. Only bit above can be a comment.
 
 /* 
-    Variables
+    Data types:
+        - number
+        - string
+        - boolean
+        - null
+        - undefined 
+        - object
+        - symbol
+        - bigint
 */
 
-var name = "Rob"; // old-school declaration
+// Numbers
 
-let age = 20;
-const birthYear = 1999;
+let integer = 1;
+let float = 1.25;
+let infinity = -Infinity;
 
-// birthYear = 2000; -> ERROR! Changing constant variable
+// Special types: Infinity, -Infinity, NaN
 
-age = 21;
+// console.log (1 / 0, Infinity, -Infinity); -> Inifinity sample
 
-// let var1 = "Hello, how are you?", var2 = 200, var3 = [0, 1, 2]; -> Less-readable code!
+// console.log("Hi Rich!" / 3); -> NaN [not a number]
 
-let question = "Hello, how are you"; // -> string 
-let wage = 2000; // -> integer
+// let age = "Rich" * 5;
+// let calculation = age * 4 + 2 - 1; -> operations with NaN return NaN!
 
-// What is good code? -> READABLE code.
+// Math operations are SAFE! Worst case scenarion: NaN
 
-question = "Hi, how are you?";
+// Strings
 
-/*
-    Variable naming
+let name = "Alen"; // -> Double quotations 
+let surname = 'Mehic'; // -> Single quotations
+let fullname = `Fullname: ${name} ${surname}`; // -> Backtics ${expression}
+let mathResult = `Result is: ${ 2 + 3 + 4 }`; 
+
+// Booleans (logical type)
+
+let isWeekend = true;
+let underAge = false;
+
+let isGreater = 16 > 8;
+
+// Null
+
+let users = null;
+
+// Null is a reference to a non-existing object. 
+
+// It is a special value that represents nothing, empty or value unknown
+
+// Undefined
+
+// Undefined = value not assigned
+
+let x; // -> undefined
+
+// Objects & symbols
+
+// Objects are used to present collections.
+
+// Symbols are used to create unique indentifiers for objects.
+
+/* typeoff operator */
+
+let val = null;
+let number = 2;
+let string = "string"
+let boolean = true;
+
+console.log(
+    'Typeof operator: ',
+    typeof null, // BUG! returns object
+    typeof(number),
+    typeof string, 
+    typeof boolean, 
+    typeof undefined, 
+    typeof console, 
+    typeof console.log // returns function even though functions are object types.
+);
+
+/* 
+    Type Conversion 
 */
 
-/*
-    Allowed names:
-        - Letters
-        - Digits
-        - &, _
+// String conversion
 
-    - camelCase
-    - JS is a case sensitive language (let name, let Name are different!)
-    
-    Not allowed:
-        - starting with numbers (ex. let 123a)
-        - kebab case (ex. first-name)
-        - reserved names (import, for, let, const etc.)
+let isSunday = false; // -> 'false'
+
+console.log(
+    'String conversion: ', 
+    String(isSunday), 
+    String(null), 
+    String(undefined), 
+    String(1.25) );
+
+// Number conversion
+
+let currentDay = "14th";
+let badFormat = "   30   ";
+let shoeSize = 9;
+let hasLicense = false;
+
+console.log( 
+    'Number conversion: ',
+    Number(currentDay), 
+    Number(badFormat), //-> "30" -> 30
+    Number(shoeSize), 
+    Number(hasLicense), 
+    Number(null), 
+    Number(undefined) );
+
+// Boolean conversion
+
+/* 
+    Intuitively "empty" values are converted to false:
+    - 0
+    - ""
+    - null
+    - undefined
+    - NaN
+
+    All other types become true
 */
 
-let weight = "75kg";
-let Weight = "70kg";
-
-let $ = 9; // Supershort variable name, -> jQuery
-let _ = 1; // -> Lodash (utility library)
-
-// let first-name = 'Alen'; -> ERROR!
-// let 123name = "Alen"; -> ERROR!
-// let if = "Alen"; -> ERROR!
-
-// Naming should be clean and obvious! 
-
-// isOk = true; -> strict mode prevents this behaviour (without strict mode enabled, this line would declare a variable and assign it the value of true)
-
-console.log($, _);
+console.log(
+    'Boolean conversion: ', 
+    Boolean(0),
+    Boolean(''),
+    Boolean(null),
+    Boolean(undefined),
+    Boolean(NaN),
+    Boolean(22),
+    Boolean(Infinity),
+    Boolean('Hey Alen!'),
+    Boolean('true'),
+    Boolean('0'),
+    Boolean('1.24')
+)
