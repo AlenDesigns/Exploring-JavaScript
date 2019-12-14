@@ -1,0 +1,59 @@
+/* 
+
+Operators
+
+*/
+
+/*
+
+Terms:
+
+- Operand - Value operator is applied to
+  5 + 2 - 5 and 2 are the operands
+- Unary operator - operator assigned to a single operand
+  -5 -> - is an unary operator and 5 is the operand
+ Binary operator - operator assigned to 2 operands
+  3 - 1 -> - is a binary operator and 3, 1 are operands
+
+//Binary +
+
+*/
+
+let name = "Rich" + ' ' + "Mery";
+let myString = 1 + "2";  // if + detects a string, it converts all operands to string
+myString = 1 + 1 + "2"; // operations are evaluated from left to right - 22
+
+// All other operators, except binary +, convert to numbers
+let age = "21" -1;
+let days = 12 * "30";
+let randomCalculation = 12 / "2" + 1;
+
+//console.log(randomCalculation);
+
+
+// Unary +
+
+let underage = true;
+//console.log(+underage); // -> 1 + converting booloean value to a number
+
+let x = "30";
+let y = "20";
+
+//console.log(+x + +y);
+
+//Remainder Operator - %
+
+//console.log(5 % 2);
+//console.log(6 % 3);
+
+//Exponentiation operator
+
+console.log(2 ** 2);
+console.log(3 ** 2);
+console.log(4 ** 3);
+console.log(8 ** (1/3) ); // 8 to the power of 3 i.e. 2x2x2 = 8
+
+/* 
+Operators execution order is determined by PRECEDENCE TABLE! (online reference available) - 
+JavaScript Precedence Table Uniary, Binary, Assignment (Assignment is an operator)
+*/
