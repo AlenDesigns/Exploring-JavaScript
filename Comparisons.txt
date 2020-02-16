@@ -294,6 +294,6 @@ if ( null ){
 
   //Ternary operator
 
-let checkNum = ( 1 < 2 ) ? ('TRUE') : ('FALSE');
+let checkNum = ( 1 < 2) ? ('TRUE') : ('FALSE');
 
 console.log(checkNum);
